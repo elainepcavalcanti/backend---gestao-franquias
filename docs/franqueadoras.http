@@ -1,0 +1,72 @@
+@baseUrl = https://localhost:7051
+@token = COLE_O_TOKEN_JWT_AQUI
+
+### Login
+POST {{baseUrl}}/api/Auth/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "admin.exemplo@franquias.local",
+  "senha": "Admin123!"
+}
+
+### Listar franqueadoras
+GET {{baseUrl}}/api/franqueadoras
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### Listar unidades
+GET {{baseUrl}}/api/Unidades
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### Listar responsáveis
+GET {{baseUrl}}/api/Responsaveis
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### Listar categorias
+GET {{baseUrl}}/api/Categorias
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### Listar produtos
+GET {{baseUrl}}/api/Produtos
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### Consultar estoque da unidade
+GET {{baseUrl}}/api/Estoque?unidadeId=1
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### Consultar vendas
+GET {{baseUrl}}/api/Vendas?unidadeId=1
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### Consultar royalties
+GET {{baseUrl}}/api/Royalty?unidadeId=1
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### Consultar chamados
+GET {{baseUrl}}/api/Chamados?unidadeId=1
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### Relatório de faturamento
+GET {{baseUrl}}/api/Relatorios/faturamento?unidadeId=1
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### Produtos mais vendidos
+GET {{baseUrl}}/api/Relatorios/produtos-mais-vendidos?unidadeId=1
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### Estoque crítico
+GET {{baseUrl}}/api/Relatorios/estoque-critico?unidadeId=1
+Authorization: Bearer {{token}}
+Accept: application/json
